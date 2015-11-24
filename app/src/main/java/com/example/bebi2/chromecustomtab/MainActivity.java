@@ -23,15 +23,13 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class MainActivity extends AppCompatActivity{
+public class MainActivity extends AppCompatActivity {
 
     static final String URL = "https://github.com/Bedant";
     CustomTabsClient mClient;
     CustomTabsSession mCustomTabsSession;
 
     Context mContext;
-
-
 
     private static class NavigationCallback extends CustomTabsCallback {
         @Override
@@ -53,7 +51,7 @@ public class MainActivity extends AppCompatActivity{
             @Override
             public void onClick(View view) {
                 CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder(getSession());
-                builder.setToolbarColor(Color.BLUE).setShowTitle(true);
+                builder.setToolbarColor(Color.RED).setShowTitle(true);
                 prepareMenuItems(builder);
                 prepareActionButton(builder);
                 builder.setStartAnimations(mContext, R.anim.slide_in_right, R.anim.slide_out_left);
